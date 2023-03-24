@@ -1,6 +1,6 @@
 """Written by Brian Atkinson"""
 
-# Define prior probabilities for two hypotheses: A and B.
+# Import the BayesianFilter class from the bayesian module.
 from classes.bayesian import BayesianFilter
 
 # Define prior probabilities for two hypotheses: A and B.
@@ -20,16 +20,21 @@ def main():
     # Create a BayesianFilter object with the given prior probabilities and likelihoods.
     bayesian_filter = BayesianFilter(PRIOR_PROB, LIKELIHOOD)
 
+    print("Initial probabilities:")
+    print(bayesian_filter.get_probabilities())
+
     # Update the probabilities with new evidence E1.
     bayesian_filter.update('E1')
 
-    # Print the updated probabilities.
+    # Print the updated probabilities after observing evidence E1.
+    print("\nProbabilities after observing evidence E1:")
     print(bayesian_filter.get_probabilities())
 
     # Update the probabilities with new evidence E2.
     bayesian_filter.update('E2')
 
-    # Print the updated probabilities.
+    # Print the updated probabilities after observing evidence E2.
+    print("\nProbabilities after observing evidence E2:")
     print(bayesian_filter.get_probabilities())
 
 
