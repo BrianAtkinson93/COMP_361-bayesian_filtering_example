@@ -1,3 +1,5 @@
+"""Written by Brian Atkinson"""
+
 # Define prior probabilities for two hypotheses: A and B.
 from classes.bayesian import BayesianFilter
 
