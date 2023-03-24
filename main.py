@@ -15,6 +15,12 @@ LIKELIHOOD = {
     'B': {'E1': 0.3, 'E2': 0.3},
 }
 
+# Evidence explanation
+EVIDENCE_EXPLANATION = {
+    'E1': "The first piece of evidence (E1) represents...",
+    'E2': "The second piece of evidence (E2) represents...",
+}
+
 
 def main():
     # Create a BayesianFilter object with the given prior probabilities and likelihoods.
@@ -24,6 +30,8 @@ def main():
     print(bayesian_filter.get_probabilities())
 
     # Update the probabilities with new evidence E1.
+    print("\nProcessing evidence E1:")
+    print(EVIDENCE_EXPLANATION['E1'])
     bayesian_filter.update('E1')
 
     # Print the updated probabilities after observing evidence E1.
@@ -31,6 +39,8 @@ def main():
     print(bayesian_filter.get_probabilities())
 
     # Update the probabilities with new evidence E2.
+    print("\nProcessing evidence E2:")
+    print(EVIDENCE_EXPLANATION['E2'])
     bayesian_filter.update('E2')
 
     # Print the updated probabilities after observing evidence E2.
