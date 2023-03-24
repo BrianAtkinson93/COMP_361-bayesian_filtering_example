@@ -1,24 +1,30 @@
 """Written by Brian Atkinson"""
 
-# Import the BayesianFilter class from the bayesian module.
+import json
 from classes.bayesian import BayesianFilter
-
-# Define prior probabilities for two hypotheses: A and B.
-PRIOR_PROB = {
-    'A': 0.5,
-    'B': 0.5,
-}
-
-# Define likelihoods of evidence E1 and E2 for both hypotheses.
-LIKELIHOOD = {
-    'A': {'E1': 0.1, 'E2': 0.7},
-    'B': {'E1': 0.3, 'E2': 0.3},
-}
+from stubs.likelihood import calculate_likelihoods
 
 # Evidence explanation
 EVIDENCE_EXPLANATION = {
-    'E1': "The first piece of evidence (E1) represents...",
-    'E2': "The second piece of evidence (E2) represents...",
+    'T1': "The first piece of evidence (T1) represents the patient testing positive for a certain symptom.",
+    'T2': "The second piece of evidence (T2) represents the patient testing positive for a different symptom.",
+}
+
+# Load the data from the JSON file
+with open('stubs/data.json', 'r') as f:
+    data = json.load(f)['data']
+
+# Define hypotheses and evidence
+HYPOTHESES = ['D', 'ND']
+EVIDENCE = ['T1', 'T2']
+
+# Calculate the likelihoods
+LIKELIHOOD = calculate_likelihoods(data, HYPOTHESES, EVIDENCE)
+
+# Define prior probabilities for two hypotheses: D and ND.
+PRIOR_PROB = {
+    'D': 0.5,
+    'ND': 0.5,
 }
 
 
@@ -29,22 +35,22 @@ def main():
     print("Initial probabilities:")
     print(bayesian_filter.get_probabilities())
 
-    # Update the probabilities with new evidence E1.
-    print("\nProcessing evidence E1:")
-    print(EVIDENCE_EXPLANATION['E1'])
-    bayesian_filter.update('E1')
+    # Update the probabilities with new evidence T1.
+    print("\nProcessing evidence T1:")
+    print(EVIDENCE_EXPLANATION['T1'])
+    bayesian_filter.update('T1')
 
-    # Print the updated probabilities after observing evidence E1.
-    print("\nProbabilities after observing evidence E1:")
+    # Print the updated probabilities after observing evidence T1.
+    print("\nProbabilities after observing evidence T1:")
     print(bayesian_filter.get_probabilities())
 
-    # Update the probabilities with new evidence E2.
-    print("\nProcessing evidence E2:")
-    print(EVIDENCE_EXPLANATION['E2'])
-    bayesian_filter.update('E2')
+    # Update the probabilities with new evidence T2.
+    print("\nProcessing evidence T2:")
+    print(EVIDENCE_EXPLANATION['T2'])
+    bayesian_filter.update('T2')
 
-    # Print the updated probabilities after observing evidence E2.
-    print("\nProbabilities after observing evidence E2:")
+    # Print the updated probabilities after observing evidence T2.
+    print("\nProbabilities after observing evidence T2:")
     print(bayesian_filter.get_probabilities())
 
 

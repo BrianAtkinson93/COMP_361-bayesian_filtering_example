@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "hypothesis": "D",
+      "evidence1": "T1",
+      "evidence2": "T1"
+    },
+    {
+      "hypothesis": "ND",
+      "evidence1": "T1",
+      "evidence2": "T1"
+    },
+    {
+      "hypothesis": "ND",
+      "evidence1": "T2",
+      "evidence2": "T2"
+    },
+    {
+      "hypothesis": "D",
+      "evidence1": "T1",
+      "evidence2": "T2"
+    },
+    {
+      "hypothesis": "ND",
+      "evidence1": "T2",
+      "evidence2": "T2"
+    },
+    {
+      "hypothesis": "ND",
+      "evidence1": "T1",
+      "evidence2": "T1"
+    },
+    {
+      "hypothesis": "ND",
+      "evidence1": "T2",
+      "evidence2": "T1"
+    },
+    {
+      "hypothesis": "ND",
+      "evidence1": "T1",
+      "evidence2": "T2"
+    },
+    {
+      "hypothesis": "ND",
+      "evidence1": "T2",
+      "evidence2": "T2"
+    },
+    {
+      "hypothesis": "ND",
+      "evidence1": "T1",
+      "evidence2": "T1"
+    },
+    {
+      "hypothesis": "ND",
+      "evidence1": "T2",
+      "evidence2": "T2"
+    },
+    {
+      "hypothesis": "ND",
+      "evidence1": "T2",
+      "evidence2": "T2"
+    },
+    {
+      "hypothesis": "ND",
+      "evidence1": "T1",
+      "evidence2": "T2"
+    },
+    {
+      "hypothesis": "ND",
+      "evidence1": "T1",
+      "evidence2": "T2"
+    },
+    {
+      "hypothesis": "D",
+      "evidence1": "T1",
+      "evidence2": "T1"
+    },
+    {
+      "hypothesis": "D",
+      "evidence1": "T2",
+      "evidence2": "T2"
+    },
+    {
+      "hypothesis": "ND",
+      "evidence1": "T2",
+      "evidence2": "T1"
+    },
+    {
+      "hypothesis": "D",
+      "evidence1": "T2",
+      "evidence2": "T2"
+    },
+    {
+      "hypothesis": "ND",
+      "evidence1": "T1",
+      "evidence2": "T2"
+    },
+    {
+      "hypothesis": "D",
+      "evidence1": "T2",
+      "evidence2": "T2"
+    }
+  ]
+}
