@@ -9,7 +9,8 @@ The Bayesian Filter is a class that allows you to update probabilities based on 
 >#### Probabilities 
 >Probabilities are numerical values between 0 and 1 that indicate the likelihood of an event or a hypothesis being true. In the Bayesian Filter class, the probabilities represent the prior beliefs about the truth of each hypothesis before considering any evidence. The sum of the prior probabilities for all hypotheses should equal 1.
 <br>
-> <br>Example:<br><br>
+
+>Example:<br><br>
 prior_probabilities = {
     'A': 0.5,
     'B': 0.5,
